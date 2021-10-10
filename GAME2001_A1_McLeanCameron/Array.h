@@ -104,12 +104,12 @@ public:
 	{
 		return m_growSize;
 	}
-	int SetGrowSize(int val)
+	void SetGrowSize(int val)
 	{
 		assert(val >= 0);
 		m_growSize = val;
 	}
-private:
+
 	// Private Variables
 	T* m_array;			// Pointer to the beginning of the array
 
