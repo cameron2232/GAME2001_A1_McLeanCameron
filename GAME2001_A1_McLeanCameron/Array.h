@@ -72,6 +72,7 @@ public:
 		}
 
 		T* temp = new T[m_maxSize + m_growSize];
+		m_growSize *= 2;
 		assert(temp != nullptr);
 
 		memcpy(temp, m_array, sizeof(T) * m_maxSize);

@@ -32,5 +32,12 @@ int main()
 
 	cout << endl << endl;
 
+	cout << array.GetSize() << "  " << array.m_growSize << "\n";
+	array.Expand();
+	cout << array.GetSize() << "  " << array.m_growSize << "\n";
+	array.Expand();
+	cout << array.GetSize() << "  " << array.m_growSize << "\n";
+	array.Expand();
+
 	return 0;
 }
