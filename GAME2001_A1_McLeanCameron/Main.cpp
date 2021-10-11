@@ -14,7 +14,19 @@ int main()
 	array.push(76);
 	array.push(5);
 
-	cout << "Before Sorting: ";
+	OrderedArray<int> orderArray(3);
+	orderArray.push(20);
+	orderArray.push(105);
+	orderArray.push(20);
+	orderArray.push(24);
+
+	cout << "Ordered Array: ";
+	for (int i = 0; i < orderArray.GetSize(); i++)
+	{
+		cout << " " << orderArray[i];
+	}
+
+	cout << "\n\nBefore Sorting: ";
 	for (int i = 0; i < array.GetSize(); i++)
 	{
 		cout << " " << array[i];

@@ -1,6 +1,7 @@
 #pragma once
 #include <cassert>
 #include "Array.h"
+#include <iostream>
 #include <cstring>
 
 template<class T>
@@ -35,6 +36,11 @@ public:
 		// Step 1: Find the index to insert val
 		for (i = 0; i < Array<T>::m_numElements; i++)
 		{
+			if(Array<T>::m_array[i] == val)
+			{
+				std::cout << "This value already exists!\n\n";
+				return;
+			}
 			if (Array<T>::m_array[i] > val)
 			{
 				break;
