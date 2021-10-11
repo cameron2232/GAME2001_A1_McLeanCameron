@@ -1,19 +1,21 @@
 #pragma once
 #include <cassert>
 #include "Array.h"
+#include <cstring>
+
 template<class T>
+
 class OrderedArray:public Array<T>
 {
 public:
 	// Constructor
-	OrderedArray(int size, int growBy = 1) :
-		Array<T>::m_array(NULL), Array<T>::m_maxSize(0), Array<T>::m_growSize(0), Array<T>::m_numElements(0)
+	OrderedArray(int size, int growBy = 1)
 	{
 		if (size)	
 		{
 			Array<T>::m_maxSize = size;
 			Array<T>::m_array = new T[Array<T>::m_maxSize];
-			Array<T>::memset(Array<T>::m_array, 0, sizeof(T) * Array<T>::m_maxSize);
+			memset(Array<T>::m_array, 0, sizeof(T) * Array<T>::m_maxSize);
 
 			Array<T>::m_growSize = ((growBy > 0) ? growBy : 0);
 		}

@@ -1,10 +1,15 @@
 #pragma once
 #include <cassert>
+#include <cstring>
 
 template<class T>
 class Array
 {
 public:
+
+	Array() :
+		m_array(NULL), m_maxSize(0), m_growSize(0), m_numElements(0) {}
+
 	// Constructor
 	Array(int size, int growBy = 1) :
 		m_array(NULL), m_maxSize(0), m_growSize(0), m_numElements(0)
